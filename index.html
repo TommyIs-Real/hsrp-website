@@ -4,165 +4,60 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hawaii State Roleplay</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background: linear-gradient(-45deg, #ff7e5f, #feb47b, #00c6ff, #0072ff);
-  background-size: 400% 400%;
-  animation: gradientShift 12s ease infinite;
-}
-
-/* animated gradient */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* GLASS CARD */
-.card {
-  position: relative;
-  z-index: 5;
-  width: 90%;
-  max-width: 550px;
-  padding: 50px 30px;
-  border-radius: 25px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-  text-align: center;
-}
-
-/* TITLE */
-h1 {
-  font-size: 2.6rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  animation: fadeUp 1s ease forwards;
-}
-
-/* subtitle */
-p {
-  margin-top: 10px;
-  font-size: 1rem;
-  opacity: 0.85;
-  animation: fadeUp 1.4s ease forwards;
-}
-
-/* button */
-.btn {
-  margin-top: 30px;
-  display: inline-block;
-  padding: 14px 30px;
-  border-radius: 40px;
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  box-shadow: 0 0 15px rgba(0,198,255,0.6);
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 0 25px rgba(0,198,255,1);
-}
-
-/* fade animation */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* SVG WAVES */
-.wave-container {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.wave-container svg {
-  position: relative;
-  display: block;
-  width: calc(130% + 1.3px);
-  height: 180px;
-  animation: waveAnim 10s linear infinite;
-}
-
-@keyframes waveAnim {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-200px); }
-}
-
-/* PARTICLES */
-.particle {
-  position: absolute;
-  background: rgba(255,255,255,0.4);
-  border-radius: 50%;
-  animation: floatUp linear infinite;
-}
-
-@keyframes floatUp {
-  from { transform: translateY(100vh) scale(0.5); }
-  to { transform: translateY(-10vh) scale(1); }
-}
-
-/* MOBILE */
-@media (max-width: 500px) {
-  h1 { font-size: 1.9rem; }
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<div class="card">
+<nav>
+  <a href="index.html">Home</a>
+  <a href="departments.html">Departments</a>
+  <a href="ban-appeal.html">Ban Appeal</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="section hero fade-in">
   <h1>Hawaii State Roleplay</h1>
-  <p>🌴 A new level of roleplay is arriving soon.</p>
-  <a href="https://discord.gg/hsrp" class="btn" target="_blank" rel="noopener noreferrer">Join Discord</a>
-</div>
+  <p>Professional ERLC roleplay in paradise</p>
+  <div style="margin-top:20px;">
+    <a href="#" class="btn btn-primary">Join Discord</a>
+    <a href="#departments" class="btn btn-secondary">Explore</a>
+  </div>
+</section>
 
-<!-- WAVES -->
-<div class="wave-container">
-<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-  <path d="M0,0V46.29c47.79,22,103.59,32,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72c69.27,18,138.3,24.88,209,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,5.68V0Z"
-  opacity=".25" fill="#ffffff"></path>
-</svg>
-</div>
+<!-- Features -->
+<section class="section fade-in">
+  <h2>Why Join Us</h2>
+  <div class="grid grid-4">
+    <div class="card">Realistic Roleplay<br><small>Structured and immersive ERLC scenarios</small></div>
+    <div class="card">Active Community<br><small>Players online daily and engaged</small></div>
+    <div class="card">Departments<br><small>Police, Fire, EMS, and Civilians</small></div>
+    <div class="card">Easy to Join<br><small>No complicated setup required</small></div>
+  </div>
+</section>
 
-<script>
-/* PARTICLE GENERATOR */
-for (let i = 0; i < 25; i++) {
-  let p = document.createElement("div");
-  p.className = "particle";
+<!-- Stats -->
+<section class="section fade-in">
+  <h2>Server Stats</h2>
+  <div class="stats">
+    <div class="stat"><h2>500+</h2><p>Members</p></div>
+    <div class="stat"><h2>50+</h2><p>Active Players</p></div>
+    <div class="stat"><h2>24/7</h2><p>Sessions</p></div>
+  </div>
+</section>
 
-  let size = Math.random() * 6 + 2;
-  p.style.width = size + "px";
-  p.style.height = size + "px";
+<!-- CTA -->
+<section class="section cta fade-in">
+  <h2>Ready to Join?</h2>
+  <p>Become part of Hawaii’s fastest growing roleplay community</p>
+  <a href="#" class="btn btn-primary">Join Our Discord</a>
+</section>
 
-  p.style.left = Math.random() * 100 + "vw";
-  p.style.animationDuration = (Math.random() * 10 + 5) + "s";
-  p.style.opacity = Math.random();
+<footer>
+  © 2026 Hawaii State Roleplay
+</footer>
 
-  document.body.appendChild(p);
-}
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
